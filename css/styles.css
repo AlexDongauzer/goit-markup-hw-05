@@ -510,7 +510,9 @@ body {
   position: fixed;
   top: 0;
   opacity: 1;
-  transition: opacity var(--duration) var(--timing-function);
+  visibility: visible;
+  transition: opacity var(--duration) var(--timing-function),
+    visibility var(--duration) var(--timing-function);
 }
 .is-hidden {
   visibility: hidden;
@@ -519,7 +521,6 @@ body {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
 }
 .modal {
   min-width: 528px;
